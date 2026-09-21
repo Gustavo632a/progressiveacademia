@@ -20,7 +20,7 @@ npm test        # integridade dos dados e links de atendimento
 ## Configuração antes de publicar
 
 - `src/data/config.js`: informe o WhatsApp oficial em `WHATSAPP_URL`, com país e DDD. Enquanto não houver um número válido, os CTAs abrem o Instagram, e o botão flutuante usa o ícone do Instagram. Ao cadastrar o número, todos os CTAs passam a usar WhatsApp com mensagens específicas.
-- `MANDACARU_MAPS_URL`: substitua pelo link oficial. O fallback abre uma busca pelo nome da academia; o mapa incorporado mostra somente a região de Mandacaru, sem apresentar um endereço inventado.
+- `src/data/location.js`: endereço e identificadores confirmados no Google Maps em 21/09/2026: Rua Professor Luiz Burity, 82, Mandacaru, João Pessoa/PB. O mapa incorporado marca o estabelecimento pelo CID `3770975431927585236`; os links de localização e rota usam o Place ID `ChIJQW7mvo3nrAcR1NnEBC0yVTQ`. Os dados são compartilhados pela seção de localização e pelo cadastro de unidades. Fonte: https://www.google.com/maps?cid=3770975431927585236.
 - `src/data/modalities.js`: musculação é a atividade citada no briefing. As demais modalidades de exemplo estão com `confirmed: false` e não aparecem no site. Publique somente as confirmadas pela academia.
 - `src/data/schedule.js`: horários fornecidos no briefing; compartilhados com o FAQ. Revise com a unidade antes da publicação.
 - `src/data/units.js`: unidades, status, endereço e imagens. Valentina permanece como “Em breve”.

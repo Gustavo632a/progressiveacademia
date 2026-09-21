@@ -1,0 +1,6 @@
+import { Quote, Star } from 'lucide-react';
+import { testimonials, INSTAGRAM_URL } from '../data/config';
+import { SectionHeading } from './UI';
+export default function Testimonials() {
+  return <section className="section container testimonials-section"><SectionHeading eyebrow="CADA EVOLUÇÃO TEM UMA HISTÓRIA" title="QUEM TREINA," accent="SENTE A EVOLUÇÃO." />{testimonials.length ? <div className="testimonials-grid">{testimonials.map(item => <figure className="testimonial" key={item.name}><Quote /><blockquote>{item.quote}</blockquote><figcaption>{item.photo && <img src={item.photo} alt="" width="44" height="44" loading="lazy" />}<strong>{item.name}</strong>{item.rating && <span aria-label={`${item.rating} de 5 estrelas`}>{Array.from({ length: Math.min(5, item.rating) }, (_, i) => <Star key={i} size={14} fill="currentColor" aria-hidden="true" />)}</span>}</figcaption></figure>)}</div> : <div className="testimonial-empty" data-reveal><Quote size={40} strokeWidth={1} /><p>O próximo capítulo pode ser o seu.</p><span>Conheça o dia a dia da nossa comunidade.</span><a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-link">@progressive_academia ↗</a></div>}</section>;
+}

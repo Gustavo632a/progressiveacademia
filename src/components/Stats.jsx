@@ -1,0 +1,5 @@
+import { ArrowUpRight, MoveUpRight } from 'lucide-react';
+import { statistics } from '../data/config';
+export default function Stats() {
+  return <section className="stats-strip" aria-label="Destaques da Progressive"><div className="container stats-inner"><div className="stats-intro"><span className="eyebrow">MOVIMENTO QUE TRANSFORMA</span><p>O progresso não para.<br /><strong>A Progressive também não.</strong></p></div><div className="stat"><span className="stat-number">02<span> / UNIDADES</span></span><p>1 em funcionamento + 1 em breve</p></div><div className="stat"><MoveUpRight className="stat-arrow" size={44} strokeWidth={1.5} /><div><strong>SEMPRE EM EVOLUÇÃO</strong><p>Mais espaço para ir além.</p></div></div><a href="#unidades" className="round-arrow" aria-label="Conhecer nossas unidades"><ArrowUpRight /></a>{statistics.filter(s => s.value !== null).map(s => <div className="stat" key={s.label}><span className="stat-number">{s.value}</span><p>{s.label}</p></div>)}</div></section>;
+}

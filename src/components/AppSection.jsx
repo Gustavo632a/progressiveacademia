@@ -1,0 +1,6 @@
+import { Smartphone, ArrowUpRight } from 'lucide-react';
+import { appScreenshot } from '../data/config';
+import { ContactButton, SectionHeading, Brand } from './UI';
+export default function AppSection() {
+  return <section className="section section-surface"><div className="container app-layout"><div className="app-visual" data-reveal><div className="app-orbit orbit-one" /><div className="app-orbit orbit-two" />{appScreenshot ? <img src={appScreenshot} alt="Tela real do aplicativo da Progressive" className="app-screenshot" width="280" height="550" loading="lazy" /> : <div className="app-brand-tile"><Brand /><ArrowUpRight size={58} strokeWidth={1} /><span>SEU CORPO SEMPRE<br />EM PROGRESSO.</span></div>}<div className="app-mobile-tag"><Smartphone size={17} />PROGRESSIVE + VOCÊ</div></div><div data-reveal><SectionHeading eyebrow="CONECTADA COM SUA EVOLUÇÃO" title="SEU TREINO TAMBÉM" accent="ACOMPANHA VOCÊ.">Acesse informações e recursos da Progressive de forma prática pelo celular.</SectionHeading><p className="app-description">Fale com a equipe para saber como acessar o aplicativo da academia.</p><ContactButton outline message="Olá! Gostaria de saber como acessar o aplicativo da Progressive.">Conhecer o aplicativo</ContactButton></div></div></section>;
+}
